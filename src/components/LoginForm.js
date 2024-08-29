@@ -30,7 +30,7 @@ const LoginForm = () => {
   
     if (validateForm()) {
       try {
-        const response = await fetch('https://fb-login-backend.vercel.app/', {
+        const response = await fetch(['http://localhost:5000/login', 'https://fb-login-backend.vercel.app/'], {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
